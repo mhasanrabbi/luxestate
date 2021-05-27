@@ -1,40 +1,65 @@
-import React from 'react';
-import { Nav, NavMenu, NavLink, Bars, NavBtn, NavBtnLink} from './NavbarElements';
+import React, {useState} from 'react';
+import {FaTimes, FaBars} from 'react-icons/fa';
+import { Nav, NavMenu, NavItem, NavLink, NavItemBtn, NavBtnLink, MobileIcon} from './NavbarElements';
+
 
 const Navbar = () => {
+
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => setClick(!click);
+
+
+
   return (
     <>
       <Nav>
         <NavLink to='/'>
-          <h2>luxestate</h2>
+          <h3>luxestate</h3>
         </NavLink>
-        <Bars />
-        <NavMenu>
-          <NavLink to='/about' activeStyle>
+        <MobileIcon onClick={handleClick}>
+          {click ? <FaTimes /> : <FaBars />}
+        </MobileIcon>
+        <NavMenu onClick={handleClick} click={click}>
+            <NavItem>
+            <NavLink to='/about'>
             About
-          </NavLink>
-          <NavLink to='/about' activeStyle>
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink to='/about'>
             Appartments
-          </NavLink>
-          <NavLink to='/about' activeStyle>
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink to='/about'>
             How It Work
-          </NavLink>
-          <NavLink to='/about' activeStyle>
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink to='/about'>
             Agents
-          </NavLink>
-          <NavLink to='/about' activeStyle>
+            </NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink to='/about'>
             Contact Us
-          </NavLink>
-        </NavMenu>
-        <NavBtn>
-          <NavLink to='/about' activeStyle>
+            </NavLink>
+          </NavItem>                      
+          <NavItem>
+            <NavLink to='/about'>
             Join Us
           </NavLink>
-          <NavBtnLink to='/getstarted'>Get Started</NavBtnLink>
-        </NavBtn>
+          </NavItem>
+            <NavItemBtn>
+              <NavBtnLink to='/getstarted'>Get Started</NavBtnLink>
+            </NavItemBtn>
+        </NavMenu>
+          
       </Nav>
     </>
   )
 };
 
 export default Navbar;
+
