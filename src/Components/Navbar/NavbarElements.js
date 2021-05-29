@@ -1,6 +1,5 @@
-import styled from 'styled-components';
 import { NavLink as Link } from 'react-router-dom';
-
+import styled from 'styled-components';
 
 export const Nav = styled.nav`
   background: #fff;
@@ -53,7 +52,6 @@ export const NavItem = styled.li`
   }
 `
 
-
 export const NavLink = styled(Link)`
   color: #000;
   display: flex;
@@ -92,7 +90,6 @@ export const MobileIcon = styled.div`
     transition: all 0.2s ease-in-out;
   }
 `
-
 export const NavItemBtn = styled.li`
   
   @media screen and (max-width: 960px) {
@@ -125,6 +122,3 @@ export const NavBtnLink = styled(Link)`
     transition: all 0.2s ease-in-out;
   }
 `
-
-
-
