@@ -1,4 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
 :root {
   --yellow: #ffcc01;
   --black: #1f373d;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
 }

@@ -1,12 +1,12 @@
 import React from 'react';
-import './App.css';
-import {BrowserRouter as Router } from 'react-router-dom';
+
+import { Adds, Agents, Appartments, Footer, Hero, HowItWorks, Navbar, Services, Sidebar} from './components'
 
 function App() {
   return (
-    <Router>
-      <App />
-    </Router>
+    <div>
+      <Navbar/>
+    </div>
   );
 }
 
