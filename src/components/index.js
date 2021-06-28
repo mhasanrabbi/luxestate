@@ -6,7 +6,6 @@ import Hero from './Hero';
 import HowItWorks from './HowItWorks';
 import Navbar from './Navbar';
 import Services from './Services';
-import Sidebar from './Sidebar';
 
 export {
   Adds,
@@ -16,6 +15,5 @@ export {
   Hero,
   HowItWorks,
   Navbar,
-  Services,
-  Sidebar
+  Services
 }
